@@ -2,6 +2,7 @@ package com.test.selenium;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,8 @@ public class Add2CartExample {
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 		driver.manage().window().maximize();
 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		List<WebElement> allProducts = driver.findElements(By.xpath("//div[@class = 'product']"));
 	
 
